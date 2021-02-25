@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Maurício\Documents\Arquivo\Generation\Giteration\sss\.metadata\.plugins\org.eclipse.jdt.core
+2196199803.index
+491525517.index
+3992238317.index

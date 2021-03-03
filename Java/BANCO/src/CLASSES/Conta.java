@@ -2,25 +2,35 @@ package CLASSES;
 
 public class Conta
 {
-	private int numero;
-	private String cpf;
-	private double saldo;
-	private boolean ativa;
-	
+	protected int numero;
+	protected String cpf;
+	protected double saldo;
+	protected boolean ativa;
+
+	public Conta()
+	{
+		this.saldo = 0;
+	}
 	public Conta(int numero)
 	{
 		this.numero = numero;
+		
+		this.saldo = 0;
 	}
 	public Conta(int numero, String cpf)
 	{
 		this.numero = numero;
 		this.cpf = cpf;
+		
+		this.saldo = 0;
 	}
 	public Conta(int numero, String cpf, boolean ativa)
 	{
 		this.numero = numero;
 		this.cpf = cpf;
 		this.ativa = ativa;
+		
+		this.saldo = 0;
 	}
 	
 	public void Debito(double valor)

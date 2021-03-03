@@ -12,6 +12,7 @@ public class Exercicio4
 		for (int i = 0; i < 10; i++) 
 		{
 			func[i] = new Funcionario(gerar.Nome(), gerar.Nome(), gerar.Acao());
+			System.out.println();
 		}
 
 		System.out.println("Objetos Funcionário foram instânciados.");

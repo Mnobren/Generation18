@@ -23,6 +23,19 @@ public class Conta
 		this.ativa = ativa;
 	}
 	
+	public void Debito(double valor)
+	{
+		if(valor < saldo)
+		{
+			saldo = saldo - valor;
+		}
+	}
+	
+	public void Credito(double valor)
+	{
+		saldo = saldo + valor;
+	}
+	
 	//GetSet
 	public int getNumero()
 	{

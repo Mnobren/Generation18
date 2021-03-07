@@ -4,8 +4,9 @@ public class Conta
 {
 	protected int numero;
 	protected String cpf;
-	protected double saldo;
+	private double saldo = 0;
 	protected boolean ativa;
+	protected int data;
 
 	public Conta()
 	{
@@ -35,15 +36,21 @@ public class Conta
 	
 	public void Debito(double valor)
 	{
-		if(valor < saldo)
+		if(valor <= saldo)
 		{
 			saldo = saldo - valor;
+			System.out.println("Transação realizada com sucesso.");
+		}
+		else
+		{
+			System.out.println("O débito não foi realizado. Valor insuficiente em conta.");
 		}
 	}
 	
 	public void Credito(double valor)
 	{
 		saldo = saldo + valor;
+		System.out.println("Transação realizada com sucesso.");
 	}
 	
 	//GetSet

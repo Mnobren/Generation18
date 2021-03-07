@@ -12,7 +12,7 @@ public class Exercicio3
 		List<Produto> estoque = new ArrayList<>();
 		
 		Scanner s = new Scanner(System.in);
-
+		
 		do
 		{
 			System.out.println("1 - Adicionar produto.");

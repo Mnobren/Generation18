@@ -8,17 +8,22 @@ public class ContaEspecial extends Conta {
     Scanner s = new Scanner(System.in);
     
     public ContaEspecial() {
-	    System.out.println("Logue na sua conta.");
-	    System.out.println("Digite o numero da sua conta:");
-	    numero = s.nextInt();
-	    System.out.println("Digite o seu CPF: ");
-	    cpf = s.next();
-	    System.out.println("Essa conta esta ativa?");
-	    System.out.println();
-	    System.out.println("[1]Ativa[2]inativa");
-	    char c = s.next().charAt(0);
-	    if(c == 1) ativa = true;
-	    if(c == 2) ativa = false;
+		System.out.println("        Painel - Informe os dados da sua conta \n");
+		System.out.println("    ========================================== \n");
+		System.out.println("              Informe o numero da contas");
+		System.out.print("                      (4 digitos):               \n");
+		numero = s.nextInt();
+		System.out.println("              Informe o numero do CPF:           ");
+		System.out.print("                      (8 digitos):               \n");
+		cpf = s.next();
+		System.out.println("              Essa conta esta ativa?           \n");
+		System.out.println("              [1]Ativa    [2]Inativa           \n");
+		int a = s.nextInt();
+		System.out.println("    ========================================== \n");
+		if (a == 1)
+			ativa = true;
+		if (a == 2)
+			ativa = false;
     }
     
     @Override

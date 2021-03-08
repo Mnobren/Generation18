@@ -10,9 +10,11 @@ public class ContaEstudantil extends Conta {
 	public ContaEstudantil() {
 		System.out.println("        Painel - Informe os dados da sua conta \n");
 		System.out.println("    ========================================== \n");
-		System.out.println("              Digite o numero da sua conta:    \n");
+		System.out.println("              Informe o numero da contas");
+		System.out.print("                      (4 digitos):               \n");
 		numero = ler.nextInt();
-		System.out.println("              Digite o seu CPF:                \n");
+		System.out.println("              Informe o numero do CPF:           ");
+		System.out.print("                      (8 digitos):               \n");
 		cpf = ler.next();
 		System.out.println("              Essa conta esta ativa?           \n");
 		System.out.println("              [1]Ativa    [2]Inativa           \n");
@@ -23,7 +25,7 @@ public class ContaEstudantil extends Conta {
 		if (a == 2)
 			ativa = false;
 
-		solicitarEmprestimo();
+		if(ativa) solicitarEmprestimo();
 	}
 	
 	private void solicitarEmprestimo() 

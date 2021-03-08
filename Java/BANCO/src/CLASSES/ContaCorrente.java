@@ -33,16 +33,17 @@ public class ContaCorrente extends Conta {
 		System.out.println("                 [1]Sim[2]Não                  \n");
 		System.out.println("    ========================================== \n");
 		int r = ler.nextInt();
-
 		if (r == 1) {
-			if (this.contadorTalao < 3) {
+			System.out.println("Quantos talões você deseja ?");
+			int q = ler.nextInt();
+			if ((this.contadorTalao + q) <= 3) {
+				this.contadorTalao = this.contadorTalao + q;
 				System.out.println("++++++++++++++++++++++++++ Extrato Conta +++++++++++++++++++++");
 				System.out.println("\t\tTransação realizada com sucesso. ");
 				System.out.println("- Número da conta            " + numero);
 				System.out.println("- Operação          \t\t\t       cheque");
 				System.out.println("- Talões Restantes:          " + (3-this.contadorTalao));
 				System.out.println("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-				this.contadorTalao = this.contadorTalao + 1;
 			} else {
 				System.out.println("Limite de talão excedido!");
 			}

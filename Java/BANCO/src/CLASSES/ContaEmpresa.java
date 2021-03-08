@@ -68,7 +68,7 @@ public class ContaEmpresa extends Conta
 			if(emprestimoEmpresa < 10000)
 			{
 				OferecerEmprestimo();
-				Debito(valor);
+				super.Debito(valor);
 			}
 		}
 	}

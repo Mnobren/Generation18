@@ -23,8 +23,9 @@ public class Main
 		
 		do
 		{
-			System.out.println("Banco Edbank");
-			System.out.println("Por que VOCÊ Ed mais !");
+			System.out.println("==========================================================\n");
+			System.out.println("\t\t\tBanco Edbank");
+			System.out.println("\t\t\tPor que VOCÊ Ed mais !");
 			System.out.println();
 			System.out.println("1 - CONTA POUPANÇA");
 			System.out.println("2 - CONTA CORRENTE");
@@ -69,8 +70,8 @@ public class Main
 				if(conta.getAtiva() == true)
 				{
 					mov = mov + 1;
-					System.out.println("Banco Edbank");
-					System.out.println("Por que VOCÊ Ed mais !");
+					System.out.println("\t\t\tBanco Edbank");
+					System.out.println("\t\t\tPor que VOCÊ Ed mais !");
 					System.out.println();
 					System.out.println("Seja bem vindo !");
 					System.out.println();
@@ -103,13 +104,13 @@ public class Main
 						mov = 10;
 					}
 				}
-				else
+				else if(opcao != 6)
 				{
 					System.out.println("Conta inativada.");
 					mov = 10;
 				}
 			}
-			while(mov < 10);
+			while(mov < 10 && opcao != 6);
 			if(opcao == 2 && conta.getAtiva() == true)
 			{
 				((ContaCorrente) conta).pedirTalao();

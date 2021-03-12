@@ -36,6 +36,6 @@ select * from tb_pizza where preco > 45;
 select * from tb_pizza where 29 < preco and preco < 60;
 select * from tb_pizza where nome like "%C%";
 
-select * from tb_pizza inner join tb_categoria;
+select * from tb_pizza inner join tb_categoria on tb_pizza.categoria = tb_categoria.id;
 
 select * from tb_pizza where categoria = 3;

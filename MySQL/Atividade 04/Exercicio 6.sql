@@ -36,6 +36,6 @@ select * from tb_curso where preco > 50;
 select * from tb_curso where 3 < preco and preco < 60;
 select * from tb_curso where nome like "%J%";
 
-select * from tb_curso inner join tb_categoria;
+select * from tb_curso inner join tb_categoria on tb_curso.categoria = tb_categoria.id;
 
 select * from tb_curso where categoria = 5;

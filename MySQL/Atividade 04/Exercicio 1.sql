@@ -34,6 +34,6 @@ select * from tb_personagem where ataque > 2000;
 select * from tb_personagem where 1000 < defesa and defesa < 2000;
 select * from tb_personagem where nome like "%c%";
 
-select * from tb_personagem inner join tb_classe;
+select * from tb_personagem inner join tb_classe on tb_personagem.classe = tb_classe.id;
 
 select * from tb_personagem as magos where classe = 4;

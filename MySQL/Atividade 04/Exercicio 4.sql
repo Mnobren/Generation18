@@ -17,7 +17,7 @@ create table tb_produto (	id BigInt auto_increment,
 							primary key (id),
 							foreign key (categoria) references tb_categoria(id));
 
-insert into tb_categoria(nome, tipo, fornecedor) values ("bovina", "vermelha", "Fazenda Mini Boi");
+insert into tb_categoria(nome, tipo, fornecedor) values ("bovina", "vermelha", "Fazenda Faznada");
 insert into tb_categoria(nome, tipo, fornecedor) values ("suína", "vermelha", "Pork In Shop");
 insert into tb_categoria(nome, tipo, fornecedor) values ("ave", "branca", "Aves Javes");
 insert into tb_categoria(nome, tipo, fornecedor) values ("peixe", "branca", "Tubarinho e cia");
@@ -36,6 +36,6 @@ select * from tb_produto where preco > 50;
 select * from tb_produto where 3 < preco and preco < 60;
 select * from tb_produto where nome like "%C%";
 
-select * from tb_produto inner join tb_categoria;
+select * from tb_produto inner join tb_categoria on tb_produto.categoria = tb_categoria.id;
 
 select * from tb_produto where categoria = 1;
